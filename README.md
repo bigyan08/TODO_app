@@ -10,4 +10,4 @@ A simple TODO list web application built with Django to manage tasks, create, up
 5. Responsive UI using Bootstrap
 
 ## Deployment
-Deployment is pending.
+The webapp is live on : https://bigyan21.pythonanywhere.com/
