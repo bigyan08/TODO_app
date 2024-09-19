@@ -1,7 +1,43 @@
-<p> Are you sure you want to delete "{{ item }}"</p>
-<a href="{% url 'list' %}">Cancel</a>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<form action="" method="POST">
-    {% csrf_token %}
-    <input type="submit" name="Confirm">
-</form>
+<style>
+        body{
+        background-color: rgb(114, 114, 228);
+    }
+        .center-column{
+        width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 6px 2px 30px 0px rgba(0, 0, 0, 75);
+        font-size: 1.5rem;
+
+    }
+    .options{
+        justify-content:space-evenly;
+        display: flex;
+        padding: 10px 10px;
+        margin: 10px auto;
+        font-size: 1rem;
+    }
+    .btn-danger{
+        height: max-content;
+        width: max-content;
+    }
+    p{
+        text-align: center;
+    }
+</style>
+<div class="center-column">
+
+    <p> Are you sure you want to delete "{{ item }}?"</p>
+    <div class="options">
+        <a class="btn btn-danger" href="{% url 'list' %}">Cancel</a>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input class="btn  btn-info" type="submit" name="Confirm">
+        </form>
+    </div>
+</div>
